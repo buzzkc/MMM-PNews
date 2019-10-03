@@ -16,7 +16,7 @@ and get your free api key... free and easy!!
 ### Setup the MagicMirror module
 ~MagicMirror/modules
 
-git clone https://github.com/buzzkc/MMM-PirateSpeakNews
+git clone https://github.com/buzzkc/MMM-PirateSpeakNews.git
 
 cd MMM-PirateSpeakNews
 
