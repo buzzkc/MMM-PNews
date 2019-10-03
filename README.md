@@ -1,40 +1,47 @@
-# MMM-News
-MM2 News Module
+# MMM-PirateSpeakNews
+MM2 News Module, translated to pirate speak.
 
-News articles with pictures and brief description.
+News articles with pictures and brief description, translated to pirate speak.
 
 First go to:
 
 https://newsapi.org/
 and get your free api key... free and easy!!
 
----------------Installation from a terminal window-------------------
+## Installation
+### Setup the MagicMirror module
 ~MagicMirror/modules
 
-git clone https://github.com/cowboysdude/MMM-PNews
+git clone https://github.com/buzzkc/MMM-PirateSpeakNews
+
+cd MMM-PirateSpeakNews
+
+npm install
 
 
+### Using the module
 
----------------------------------------------------------------------
-
-Config.js options:
-
-               {
-			 module: 'MMM-PNews',
-			 position: 'bottom_bar',
-	 	  config: {
-		  	key: "xxxxxxxxxxxxxxxxxxxxxxxx",
-		  	maxWidth: "100%",
-		  	newsSource: "hacker-news"
-			  }
-		 },
-     
-   Configurable options:
-     maxWidth: can use px or %.... the above configuration would be used for bottom_bar location.
-               example top_left or top_right -  250px;
-               
-     newsSource:  default news source:  "usa-today"
-     List of possible sources:
+To use this module, add the following configuration block to the modules array in the `config/config.js` file:
+```js
+{
+    module: 'MMM-PirateSpeakNews',
+	position: 'bottom_bar',
+	config: {
+		key: "xxxxxxxxxxxxxxxxxxxxxxxx",
+		maxWidth: "100%",
+	    newsSource: "hacker-news"
+    }
+},
+```     
+ ## Configuration options
+ 
+ | Option              | Description
+ |-----------------    |-----------
+ | `moduleWidth`       | *Optional* can use px or %.... the above configuration would be used for bottom_bar location. Example top_left or top_right -  250px;
+ | `newsSource`        | *Required* efault news source:  "usa-today"
+ | `key`               | *Required* go to: https://newsapi.org/ and get your free api key... free and easy!!
+ 
+ List of possible sources:
      
 "the-next-web"
 "time"
@@ -78,3 +85,7 @@ Config.js options:
 
 Must be entered in your config.js just as shown!
 
+## Thanks To
+* MichMich for developing [MagicMirror<sup>2</sup>](https://github.com/MichMich/MagicMirror)
+* Based off of cowboydude's [MMM-PNews project](https://github.com/cowboysdude/MMM-PNews)
+* The pirate-speak [node library](https://www.npmjs.com/package/pirate-speak)

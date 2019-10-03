@@ -1,13 +1,11 @@
-
-  
    /* Magic Mirror
-    * Module: MMM-PNews
+    * Module: MMM-PirateSpeakNews
     *
-    * By Cowboysdude
+    * By BuzzKc
     * MIT Licensed.
     */
    
-   Module.register("MMM-PNews",{
+   Module.register("MMM-PirateSpeakNews",{
    
       // Module config defaults.
       defaults: {
@@ -19,6 +17,7 @@
           rotate: 20 * 1000,
           maxWidth: "400px", 
           newsSource: "usa-today",
+          header: "Pirate Speak News"
       },
     
       // Define required scripts.
@@ -26,12 +25,12 @@
           return ["moment.js"];
       },
       getStyles: function() {
-           return ["MMM-PNews.css"];
+           return ["MMM-PirateSpeakNews.css"];
        },
   
       // Define start sequence.
       start: function() {
-          Log.info("Starting module: " + this.name);
+          Log.info("Starting  module: " + this.name);
   
           // Set locale.
           var self = this;
@@ -54,7 +53,7 @@
           var wrapper = document.createElement("div");
           wrapper.classList.add("dimmed", "light", "small");
           var header = document.createElement("header");
-          header.innerHTML = "The News";
+          header.innerHTML = this.config.header;
           wrapper.appendChild(header);
           
            var keys = Object.keys(this.news);
@@ -66,7 +65,7 @@
          
          var newsLogo = document.createElement("div");
          var newsIcon = document.createElement("img");
-         var icon = 'modules/MMM-Pnews/img/news.png';
+         var icon = 'modules/MMM-PirateSpeakNews/img/news.png';
          newsIcon.src = news.urlToImage === "" || undefined || null ? icon : news.urlToImage;
          newsIcon.classList.add("imgDes");
          newsLogo.appendChild(newsIcon);
@@ -98,7 +97,7 @@
      },
       
       sCarousel: function() {
-       		console.log("Processing news items..");
+       		console.log("Processing thar news bounty..");
 	   		this.rotate = setInterval(() => {
 				this.aItem++;
 				this.updateDom(this.config.animationSpeed);
@@ -114,11 +113,11 @@
      },
 
      getNews: function() {
-         this.sendSocketNotification('GET_PNEWS', this.url + this.config.key);
+         this.sendSocketNotification('GET_PIRATESPEAKNEWS', this.url + this.config.key);
      },
 
      socketNotificationReceived: function(notification, payload) {
-         if (notification === "PNEWS_RESULT") {
+         if (notification === "PIRATESPEAKNEWS_RESULT") {
              this.processNews(payload);
              if(this.rotate == null){
 			   	this.sCarousel();

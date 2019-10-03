@@ -1,22 +1,23 @@
 {
-  "name": "mmm-pnews",
+  "name": "MMM-PirateSpeakNews",
   "version": "1.0.2",
-  "description": "News with pictures and brief descriptions for MM2",
-  "main": "MMM-PNews.js",
+  "description": "News with pictures and brief descriptions for MM2, translated to pirate speak",
+  "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cowboysdudes/MMM-News.git"
+    "url": "git+https://github.com/buzzkc/MMM-PirateSpeakNews.git"
   },
-  "author": "Cowboysdude",
+  "author": "BuzzKc",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cowboysdudes/MMM-PNews/issues"
+    "url": "https://github.com/buzzkc/MMM-PirateSpeakNews/issues"
   },
-  "homepage": "https://github.com/cowboysdudes/MMM-PNews#readme",
+  "homepage": "https://github.com/buzzkc/MMM-PirateSpeakNews#readme",
   "dependencies": {
+    "pirate-speak": "1.0.1"
   },
   "devDependencies": {}
 }
