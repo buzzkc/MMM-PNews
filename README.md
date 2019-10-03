@@ -3,6 +3,10 @@ MM2 News Module, translated to pirate speak.
 
 News articles with pictures and brief description, translated to pirate speak.
 
+![](./img/MMM-PirateSpeakNews.png)
+![](./img/MMM-PirateSpeakNews2.png)
+![](./img/MMM-PirateSpeakNews3.png)
+
 First go to:
 
 https://newsapi.org/
