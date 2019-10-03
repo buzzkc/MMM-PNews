@@ -42,7 +42,7 @@ To use this module, add the following configuration block to the modules array i
  | Option              | Description
  |-----------------    |-----------
  | `moduleWidth`       | *Optional* can use px or %.... the above configuration would be used for bottom_bar location. Example top_left or top_right -  250px;
- | `newsSource`        | *Required* efault news source:  "usa-today"
+ | `newsSource`        | *Required* default news source:  "usa-today"
  | `key`               | *Required* go to: https://newsapi.org/ and get your free api key... free and easy!!
  
  List of possible sources:
